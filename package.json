@@ -1,0 +1,50 @@
+{
+  "name": "@swaraj792725/llm-stream-transformer",
+  "version": "1.0.0",
+  "description": "Zero-dependency streaming SSE chunk transformer, real-time partial JSON parser, and tool-call argument accumulator for Anthropic, OpenAI, and Ollama.",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "llm-stream-transformer": "./dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts src/cli.ts --format cjs,esm --dts --clean",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "llm-stream",
+    "sse-parser",
+    "partial-json",
+    "streaming-json",
+    "anthropic-stream",
+    "openai-stream",
+    "vibe-coding",
+    "typescript",
+    "zero-dependency"
+  ],
+  "author": "Swaraj <swaraj792725@github.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swaraj792725/llm-stream-transformer.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "public"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.3.3",
+    "vitest": "^2.1.8"
+  }
+}
